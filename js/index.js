@@ -5,7 +5,8 @@ fetchPokemonList().then(async (Pokemons) => {
         const data = await resposta.json();
         return {
             name: data.name,
-            sprite: data.sprites.front_default
+            sprite: data.sprites.front_default,
+            type: data.types[0].type.name
         };
     });
 
@@ -13,6 +14,7 @@ fetchPokemonList().then(async (Pokemons) => {
     results.forEach(pokemon => {
         const article = document.createElement("article");
         article.classList.add('pokemon-card');
+        article.classList.add(`${pokemon.type}`);
         article.addEventListener("click", () => {
              window.location.href = `detalls.html?name=${pokemon.name}`;
         });

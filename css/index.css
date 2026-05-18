@@ -58,7 +58,6 @@
     display: flex;
     flex-direction: column; 
     justify-items: center;
-    background-color: lightgray;
     font-size: 30px;
     width: 200px;
     height: 300px;
@@ -67,4 +66,81 @@
 }
 #mainPkmGrid article p {
     align-self: center;
+}
+
+/*COLORES POKEMONS FONDO ------------------*/
+
+.grass {
+    background-color: #00A700;
+}
+
+.fire {
+    background-color: #ff7a1c;
+}
+
+.water {
+    background-color: #2a6aff;
+}
+
+.electric {
+    background-color: #ffd426;
+}
+
+.psychic {
+    background-color: #670e94;
+    color: white;
+}
+
+.ice {
+    background-color: #98D8D8;
+}
+
+.dragon {
+    background-color: #7038F8;
+}
+
+.dark {
+    background-color: #33302f;
+    color: white;
+}
+
+.fairy {
+    background-color: #e76a85;
+}
+
+.normal {
+    background-color: #b1b1b1;
+}
+
+.fighting {
+    background-color: #C03028;
+}
+
+.flying {
+    background-color: #A890F0;
+}
+
+.poison {
+    background-color: #A040A0;
+    color: white;
+}
+
+.ground {
+    background-color: #d88b18;
+}
+
+.rock {
+    background-color: #B8A038;
+}
+
+.bug {
+    background-color: #a6b806;
+}
+
+.ghost {
+    background-color: #705898;
+}
+
+.steel {
+    background-color: #8282af;
 }
