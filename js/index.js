@@ -12,6 +12,7 @@ fetchPokemonList().then(async (Pokemons) => {
     const results = await Promise.all(promises);
     results.forEach(pokemon => {
         const article = document.createElement("article");
+        article.classList.add('pokemon-card');
         article.addEventListener("click", () => {
              window.location.href = `detalls.html?name=${pokemon.name}`;
         });
@@ -25,3 +26,19 @@ fetchPokemonList().then(async (Pokemons) => {
     });
 });
 
+
+const searchInput = document.getElementById('pkmSearchInput');
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const InputUser = e.target.value.toLowerCase();
+        const PokemonCards = document.querySelectorAll('.pokemon-card');
+
+        PokemonCards.forEach(card => {
+            const text = card.querySelector('p');
+            if (text) {
+                const PokemonName = text.textContent.toLowerCase();
+                card.style.display = PokemonName.includes(InputUser) ? 'flex' : 'none';
+            }
+        });
+    });
+}
