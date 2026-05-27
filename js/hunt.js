@@ -18,9 +18,18 @@ async function randomPokemon () {
     return pokemon
 }
 
+function guardarPokemon(data){
+    pass
+    /* Guardar pokemon en local storage */
+}
+
 function printPokemon(data){
     const ZonaFoto = document.querySelector("#ZonaAparicionPokemon");
     const foto = document.createElement("img");
+    foto.addEventListener("click", () => {
+        guardarPokemon(data)
+        window.location.href = `my_pokemons.html`;
+    });
     foto.src = data.sprites.front_default;
     ZonaFoto.appendChild(foto);
 }
