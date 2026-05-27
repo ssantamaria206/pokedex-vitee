@@ -19,7 +19,7 @@ async function randomPokemon () {
 }
 
 function guardarPokemon(data){
-    pass
+    console.log("aun no se ha creado la funcion para guardarlo")
     /* Guardar pokemon en local storage */
 }
 
