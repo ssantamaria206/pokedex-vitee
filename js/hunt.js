@@ -1,4 +1,16 @@
-import fetchPokemon from "./api.js"
+
+async function fetchPokemon(idOrName) {
+    try {
+        const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${idOrName}`);
+
+        if (!resposta.ok) {
+            throw new Error("Error al cargar pokemon");
+        }
+        return await resposta.json();
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 async function randomPokemon () {
     const randomID = Math.floor(Math.random() * 151) + 1;
