@@ -1,0 +1,8 @@
+img{
+    justify-self: center;
+}
+#ZonaAparicionPokemon{
+    position: absolute;
+    left: 600px;
+    top: 450px;
+}

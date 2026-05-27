@@ -30,7 +30,7 @@ async function fetchPokemonList() {
  * @param {string|number} idOrName
  * @returns {Promise<Object>}
  */
-async function fetchPokemon(idOrName) {
+export async function fetchPokemon(idOrName) {
     try {
         const resposta = await fetch(`${BASE_URL}/pokemon/${idOrName}`);
 
