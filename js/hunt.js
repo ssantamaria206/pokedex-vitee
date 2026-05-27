@@ -14,18 +14,18 @@ async function GrabPokemon(idOrName) {
 
 async function randomPokemon () {
     const randomID = Math.floor(Math.random() * 151) + 1;
-    const pokemon = fetchPokemon(randomID)
+    const pokemon = GrabPokemon(randomID)
 }
 
-function printPokemon(){
+function printPokemon(data){
     const ZonaFoto = document.querySelector("#ZonaAparicionPokemon");
     const foto = document.createElement("img");
     foto.src = data.sprites.front_default;
     ZonaFoto.appendChild(foto);
 }
 
-function createPokemon(){
-    const data = randomPokemon()
+async function createPokemon(){
+    const data = await randomPokemon()
     printPokemon(data)
 }
 
