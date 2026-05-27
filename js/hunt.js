@@ -14,7 +14,7 @@ async function GrabPokemon(idOrName) {
 
 async function randomPokemon () {
     const randomID = Math.floor(Math.random() * 151) + 1;
-    const pokemon = GrabPokemon(randomID)
+    const pokemon = await GrabPokemon(randomID)
     return pokemon
 }
 
