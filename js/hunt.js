@@ -1,5 +1,5 @@
 
-async function fetchPokemon(idOrName) {
+async function GrabPokemon(idOrName) {
     try {
         const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon/${idOrName}`);
 
